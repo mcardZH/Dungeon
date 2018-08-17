@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="地牢冒险_Dungeon">
+    <output-path>$PROJECT_DIR$/out/artifacts/_Dungeon</output-path>
+    <root id="archive" name="地牢冒险_Dungeon.jar">
+      <element id="module-output" name="Dungeon地牢冒险" />
+    </root>
+  </artifact>
+</component>

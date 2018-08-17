@@ -1,0 +1,12 @@
+#地牢名称
+#test:
+  #运行状态
+  #running: false
+  #System.currentTimeMillis()取当前时间
+  #time: 0
+  #player: mcard
+  #----------------以上为start瞬间增加配置----------------
+  #下为杀怪增加配置
+  #killed:
+  #  'mob1': 5
+  #  'mob2': 9

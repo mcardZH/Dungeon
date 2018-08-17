@@ -1,0 +1,17 @@
+name: Dungeon
+version: 1.4
+main: cn.minezone.dungeon.Dungeon
+
+softdepend: [PlaceholderAPI]
+
+author: mcard
+
+commands:
+  dungeon:
+    usage: §c'/dungeon help' for help
+    description: §a Player use it
+    permission: dungeon.player
+  dungeonadmin:
+    usage: §c'/dungeonadmin help' for help
+    description: §a OP use it
+    permission: dungeon.admin

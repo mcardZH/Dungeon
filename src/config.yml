@@ -1,0 +1,72 @@
+#副本世界名称
+#world: Dungeon
+world: world
+
+#dungeon leave传送到的位置
+spawn-loc: world 100 100 100
+#           世界名 X Y  Z
+
+#重置时间
+re-limit:
+  #时间(0~23)
+  dungenos.default:
+    #23点
+    - 23
+  dungenos.vip:
+    - 6
+    - 12
+    - 18
+#命令/dungeon join [副本名称]
+#                  如:test
+dungeons:
+  test:
+    #出生坐标   X  Y  Z
+    location: '0 100 0'
+    #进入副本时执行指令
+    #支持PAPI变量（下同）
+    start-commands:
+      - 'say hi'
+      - 'dungeonadmin add {playerName} test2 1'
+    #打完怪自动结束
+    mobs:
+      #请注意如果有颜色代码请一并输入（&用§代替）
+      'mob1': 10
+      'mob2': 15
+    end-commands:
+      - 'say bye'
+    limit:
+      dungeons.default: 1
+      #可自定义
+      dungenos.vip: 2
+    #时间限制（单位秒），时间到后会强制传送
+    limit-time: 360
+  test2:
+    #出生坐标   X  Y  Z
+    location: '0 100 0'
+    #进入副本时执行指令
+    #支持PAPI变量（下同）
+    start-commands:
+    - 'say hi'
+    - 'dungeonadmin add {playerName} test 1'
+    #打完怪自动结束
+    mobs:
+      #请注意如果有颜色代码请一并输入（&用§代替）
+      'mob1': 10
+      'mob2': 15
+    end-commands:
+    - 'say bye'
+    limit:
+      dungeons.default: 1
+      #可自定义
+      dungenos.vip: 2
+    #时间限制（单位秒），时间到后会强制传送
+    limit-time: 360
+language:
+  help:
+    - '&a join [地牢名称] - 开启地牢冒险'
+    - '&a leave - 离开地牢冒险'
+  unknown-dungeon: '&c未知的地牢名称，请检查您的输入'
+  playing: '&c有人正在挑战此地牢，剩余时间{time}'
+  no-player-sender: '&c此命令的发送者必须是一个玩家'
+  no-playing: '&c你没在一个地牢挑战中'
+  play-too-much: '&c你今天的挑战次数已经用完了，请等待重置'
